@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/bg"
+              android:paddingBottom="@dimen/spacing_normal_16">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_normal_16"
+            android:layout_marginTop="@dimen/spacing_normal_16"
+            android:textSize="@dimen/text_size_big"
+            android:text="Team A - Team B"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+    />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_normal_16"
+            android:textSize="@dimen/text_size_big"
+            android:text="Score"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+    />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/spacing_normal_16"
+            android:layout_marginTop="@dimen/spacing_normal_16"
+            android:textSize="@dimen/text_size_big"
+            android:text="Coeff"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+    />
+
+</LinearLayout>

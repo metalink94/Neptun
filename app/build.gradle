@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.neptun.uran.app"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    flavorDimensions "releaseType"
+
+    productFlavors {
+        neptun {
+            dimension "releaseType"
+            applicationId "com.neptun.web.app"
+            buildConfigField 'String', 'URL', '"https://neptunbet.com"'
+            resValue "string", "app_name", "NeptunBet"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/ic_neptun"
+            ]
+            versionCode = 1
+            versionName = "1.0"
+        }
+        uran {
+            dimension "releaseType"
+            applicationId "com.uran.web.app"
+            buildConfigField 'String', 'URL', '"https://uranbet.com/"'
+            resValue "string", "app_name", "UranBet"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/ic_uran"
+            ]
+            versionCode = 1
+            versionName = "1.0"
+        }
+
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.google.firebase:firebase-core:16.0.7'
+    implementation 'com.google.firebase:firebase-database:16.1.0'
+    implementation 'com.google.firebase:firebase-messaging:17.4.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'org.jetbrains.anko:anko:0.10.5'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+apply plugin: 'com.google.gms.google-services'
