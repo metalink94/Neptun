@@ -32,8 +32,8 @@ android {
             manifestPlaceholders = [
                     appIcon: "@drawable/ic_neptun"
             ]
-            versionCode = 1
-            versionName = "1.0"
+            versionCode = 2
+            versionName = "1.0.1"
         }
         uran {
             dimension "releaseType"
@@ -43,8 +43,8 @@ android {
             manifestPlaceholders = [
                     appIcon: "@drawable/ic_uran"
             ]
-            versionCode = 1
-            versionName = "1.0"
+            versionCode = 2
+            versionName = "1.0.1"
         }
 
     }

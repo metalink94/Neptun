@@ -11,4 +11,5 @@ object Constants {
     const val SECOND_APP = "com.uran.web.app"
 
     const val STUB = "stub"
+    const val COUNTRY = "country"
 }
